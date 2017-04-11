@@ -23,7 +23,7 @@ module ApplicationHelper
       @attr_change = @event.attr_change
     end
   end
-
+  # 
   # def local_event_generator
   #   @events = Event.all
   #   @event_array = []
@@ -39,7 +39,7 @@ module ApplicationHelper
   # end
 
   def regenerate_events
-    @events = Event.all 
+    @events = Event.all
     @events.each do |event|
       if event.options.length != 0 && event.seen? == true
         event.update_attributes(seen?: false)
@@ -48,7 +48,7 @@ module ApplicationHelper
   end
 
   # def regenerate_local_events
-  #   @events = Event.all 
+  #   @events = Event.all
   #   @events.each do |event|
   #     if event.name.include?("local") && event.seen? == true
   #       event.update_attributes(seen?: false)

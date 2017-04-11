@@ -1,3 +1,4 @@
+
 var game = new Phaser.Game(1050, 800, Phaser.CANVAS, 'phaser-example', {preload: preload, create: create });
 console.log(gon.option1route)
 console.log(gon.gametext)
@@ -39,14 +40,14 @@ function preload(){
 
 function create() {
 
-    if (gon.gametext == "Mission Trail") {
+    if (gon.gametext == " ") {
         if (gon.time <= 15) {
-            bar = game.add.sprite(150, 0, 'bar')
+            bar = game.add.sprite(300, 0, 'bar')
         }
         else {
             bar = game.add.sprite(gon.time*10, 0, 'bar')
         }
-    player_walk = game.add.sprite(120, 50, 'player_walk', 5);
+    player_walk = game.add.sprite(150, 50, 'player_walk', 5);
     player_walk.scale.set(1);
     player_walk.smoothed = false;
     anim = player_walk.animations.add('walk');
@@ -56,6 +57,7 @@ function create() {
     gameimage = game.add.sprite(300, 130, 'image')
 
     }
+<<<<<<< HEAD
     if (gon.username != undefined) {
 <<<<<<< HEAD
     username = game.add.text(350, 10, "Name: " + gon.username, { font: "15px Press Start 2P", fill: "white" });
@@ -73,8 +75,11 @@ function create() {
     money = game.add.text(0, 110, "Money: " + gon.money, { font: "15px Press Start 2P", fill: "white" });
     }
 >>>>>>> 2e5ac71c4654cd164d7d72b0fe742fe322e47197
+=======
+>>>>>>> fdb6e8076c6a4e7ecae1c983b93c9f47b2c285de
 
     text = game.add.text(30, 550, '', { font: "30px Arial", fill: "#19de65" });
+
     nextLine();
 
 

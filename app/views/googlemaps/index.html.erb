@@ -1,5 +1,4 @@
 
-<!-- <script src="/assets/_game_event.js"></script> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,7 @@
     <link rel="stylesheet" href="stats.css">
 </head>
 <body>
-  <div id="stats">
+<div id="stats">
     <p> Name: <%= @game.username %> </p>
     <p> FOMO: <%= @game.fomo %>% <br> </p>
     <p> Time: <%= @game.time %> Minutes <br> </p>
@@ -32,13 +31,7 @@
   </div>
 
   <div class="stuff">
-    <% @event.options.each_with_index do |option, val| %>
-      <li><%= link_to option.text, event_result_path(@event, @event.results[val].id), {:class => "options"} %></li>
-    <% end %>
+      <li class="return-to-trail"><%= link_to "Return to Trail", attr_change_path(@attr_change), method: "put"%></li>
   </div>
 </body>
 </html>
-
-
-
-

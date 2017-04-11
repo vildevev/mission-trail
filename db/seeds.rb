@@ -35,6 +35,10 @@ attr_change8 = AttrChange.create(fomo_change: -5, battery_change: 0, time_change
 #Fomo Decrease x 2 & Time Decrease & Money Decrease
 attr_change9 = AttrChange.create(fomo_change: -10, battery_change: 0, time_change: -5, money_change: -10)
 
+### googlemaps Events ###
+google_event1 = Event.create(name: "good-map", text: "You found a nifty shortcut through a hole in the wall store. The place had some awesome doodads, you remember this address for another time", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+google_event2 = Event.create(name: "bad-map", text: "You check your map to find that you have been walking in the opposite direction to your destination. whoops..", attr_change_id: 4, image_url: "/assets/googlemaps.png" )
+
 ### Instagram Events ###
 
 insta_event1 = Event.create(name: "good-insta", text: "You have 11 Insta likes. You are happy.", attr_change_id: 4, image_url: "/assets/instagram.png" )
@@ -100,7 +104,7 @@ corner_2_result4 = Result.create(text: "You left without buying anything. You ge
 
 ### Half-eaten Burrito Event ###
 
-burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground")
+burrito_event = Event.create(name: "half-eaten-burrito", text: "You find a half-eaten burrito on the ground", image_url: "/assets/smile.png")
 
 burrito_option1 = Option.create(text: "Eat it?", event_id: burrito_event.id)
 burrito_option2 = Option.create(text: "Leave it be.", event_id: burrito_event.id)
@@ -111,7 +115,7 @@ burrito_result2 = Result.create(text: "You left it alone. Probably for the best"
 
 ### Wine Bar Event ###
 
-wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to a wine tasting!")
+wine_bar1 = Event.create(name: "wine-tasting", text: "You get invited to a wine tasting!", image_url: "/assets/smile.png")
 
 wine_option = Option.create(text: "Go in! It's like free pre-gaming!", event_id: wine_bar1.id)
 
@@ -119,7 +123,7 @@ wine_result = Result.create(text: "This is probably a much better party than the
 
 ### Micro-Dosing Event ###
 
-micro_dosing_event = Event.create(name: "micro-dosing", text: "All the cool kids are micro-dosing. They say it makes you way more creative or something. Do you partake in this semi-controversial but relatively benign act?")
+micro_dosing_event = Event.create(name: "micro-dosing", text: "All the cool kids are micro-dosing. They say it makes you way more creative or something. Do you partake in this semi-controversial but relatively benign act?", image_url: "/assets/smile.png")
 
 micro_dosing_option1 = Option.create(text: "Yes, I will micro-dose.", event_id: micro_dosing_event.id)
 micro_dosing_option2 = Option.create(text: "No, I will not partake.", event_id: micro_dosing_event.id)
@@ -129,12 +133,13 @@ micro_dosing_result2 = Result.create(text: "You passed on the micro-dose. Trends
 
 ### Mix-tape Event ###
 
-mix_tape_event = Event.create(name: "mix_tape", text: "This guy asks if you'll buy his mix tape. He seems really earnest but you don't really like the rap music.")
+mix_tape_event = Event.create(name: "mix_tape", text: "This guy asks if you'll buy his mix tape. He seems really earnest but you don't really like the rap music.", image_url: "/assets/smile.png")
 
 mix_tape_option1 = Option.create(text: "Sure, I'll buy it.", event_id: mix_tape_event.id)
 mix_tape_option2 = Option.create(text: "No, thanks.", event_id: mix_tape_event.id)
 
 mix_tape_result1 = Result.create(text: "You bought the mix tape for $5. It's a scratched up CD-R and you don't own anything that plays CD's, but you tell all your friends it's straight fire, yo.", option_id: mix_tape_option1.id, attr_change_id: 8, event_id: mix_tape_event.id)
+
 mix_tape_result2 = Result.create(text: "You passed on the mix tape. The Chainsmokers are more your cup of gluten-free cashew milk anyway.", option_id: mix_tape_option2.id, attr_change_id: 1, event_id: mix_tape_event.id)
 
 ### Talk to Locals 1 ###
@@ -157,8 +162,6 @@ local_event_6 = Event.create(name: "local-unicycle", text: "You get side-swiped 
 
 ### Talk to Locals 7 ###
 local_event_7 = Event.create(name: "local-scooter", text: "You narrowly dodge an alt-right bro on a scooter spouting game theory principles. That was a close shave!", attr_change_id: 3)
-
-
 
 ### Game Ending ###
 

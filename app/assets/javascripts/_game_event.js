@@ -13,7 +13,6 @@ console.log(gon.gametext)
 
 var content = [
     gon.gametext
-
 ];
 
 var line = [];

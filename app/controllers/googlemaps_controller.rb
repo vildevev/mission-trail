@@ -19,8 +19,4 @@ class GooglemapsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
-  def update
-
-  end
-
 end

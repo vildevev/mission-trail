@@ -8,7 +8,6 @@ module ApplicationHelper
     @game = Game.find(session[:id])
     @game.checked_instagram = true
     @num = rand(50)
-    p @num
     if @num >= 40
       @event = Event.find_by(name: "good-insta")
       @attr_change = @event.attr_change
@@ -17,20 +16,6 @@ module ApplicationHelper
       @attr_change = @event.attr_change
     end
   end
-
-  # def local_event_generator
-  #   @events = Event.all
-  #   @event_array = []
-  #   @events.each do |event|
-  #     if event.name.include?("local") && event.seen? == false
-  #       @event_array << event
-  #     end
-  #   end
-  #   @event_array
-  #   p "**********************"
-  #   p @event_array.length
-  #   p "**********************"
-  # end
 
   def regenerate_events
     @events = Event.all
@@ -41,14 +26,6 @@ module ApplicationHelper
     end
   end
 
-  # def regenerate_local_events
-  #   @events = Event.all
-  #   @events.each do |event|
-  #     if event.name.include?("local") && event.seen? == true
-  #       event.update_attributes(seen?: false)
-  #     end
-  #   end
-  # end
   def point_calculate
     @points = 40 + @game.battery + @game.money - @game.fomo
     @points = 0 if @points <= 0

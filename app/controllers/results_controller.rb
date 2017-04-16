@@ -19,10 +19,6 @@ class ResultsController < ApplicationController
   def update
     @game = Game.find(session[:id])
     @result = Result.find(params[:id])
-    p @result.attr_change.fomo_change
-
-    p @game.fomo
-
     @game.update_attributes(fomo: (@game.fomo += @result.attr_change.fomo_change))
     @game.update_attributes(battery: (@game.battery += @result.attr_change.battery_change))
     @game.update_attributes(time: (@game.time += @result.attr_change.time_change))
@@ -31,7 +27,6 @@ class ResultsController < ApplicationController
     @game.update_attributes(checked_tinder: false)
     @game.update_attributes(talked_to_locals: false)
     @game.update_attributes(checked_googlemaps: false)
-
 
     redirect_to games_path
   end

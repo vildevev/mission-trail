@@ -1,12 +1,10 @@
 class EventsController < ApplicationController
   include ApplicationHelper
   def index
-    randomize_event
-    if @event_array.length == 0
+    if randomize_event.length == 0
       regenerate_events
-      randomize_event
     end
-    @event = @event_array.sample
+    @event = randomize_event.sample
     @event.update_attributes(seen?: true)
     redirect_to event_path(@event)
   end
@@ -16,6 +14,3 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 end
-
-
-

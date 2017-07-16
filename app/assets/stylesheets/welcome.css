@@ -2,7 +2,6 @@
   position: relative;
   display: block;
   line-height: 5;
-
 }
 
 .occupation-container {
@@ -30,7 +29,6 @@
 #job-title {
   font: 25px "VT323", sans-serif;
   color: yellow;
-
 }
 
 #job-descriptor {

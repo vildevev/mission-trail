@@ -1,5 +1,5 @@
 .sprite {
-  position:relative;
+  position: relative;
   right: 70px;
   top: 0px;
   width: 40px;
@@ -10,11 +10,13 @@
 }
 
 @keyframes play {
-    100% { background-position: -1900px; }
+  100% {
+    background-position: -1900px;
+  }
 }
 
 .second_sprite {
-  position:relative !important;
-  bottom:20px !important;
+  position: relative !important;
+  bottom: 20px !important;
   left: 100px !important;
 }

@@ -7,9 +7,8 @@ canvas {
 }
 
 h1 {
-
-  margin:auto;
-  width:54%;
+  margin: auto;
+  width: 54%;
 }
 
 .header {
@@ -38,19 +37,19 @@ h1 {
   text-shadow: 1px 1px white;
 }
 
-a:link{
+a:link {
   color: red;
   text-decoration: none;
 }
 
-a:visited{
+a:visited {
   color: red;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: purple;
 }
 
-a:active{
+a:active {
   color: red;
 }
